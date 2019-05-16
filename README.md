@@ -1,1 +1,1 @@
-# Ngapain mz?
+# ngga ada apa apa
