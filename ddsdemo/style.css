@@ -1,0 +1,260 @@
+* {
+    padding: 0;
+    margin: 0;
+    text-decoration: none;
+    list-style: none;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: montserrat;
+}
+
+nav {
+    position: relative;
+    display: flex;
+    margin: 0px 5%;
+}
+
+nav .logo {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+nav .logo img {
+    width: 80px;
+    height: auto;
+    /* margin-left: 150px; */
+    margin-top: 5px;
+}
+
+nav .menu {
+    /* margin-left: 100px; */
+    display: flex;
+    align-items: center;
+}
+
+nav .menu ul li, nav .submenu ul li {
+    display: inline-block;
+    /* padding: 30px 30px; */
+}
+
+nav .menu ul li a {
+    color: #212121;
+    font-family: Roboto;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    padding: 30px 25px;
+}
+
+nav .submenu {
+    display: flex;
+    flex: 1;
+    align-items: center;
+    justify-content: flex-end;
+}
+nav .submenu ul li {
+    padding: 0 10px;
+}
+
+nav .submenu ul li a {
+    color: #17827B;
+    border: 1px solid #17827B;
+    border-radius: 5px;
+    padding: 3px 12px;
+    font-family: Roboto;
+    font-weight: bold;
+    font-size: 14px;
+    transition: .5s;
+}
+
+nav .submenu ul li a:hover {
+    color: white;
+    background-color: #17827B;
+    transition: .5s;
+}
+
+nav .submenu ul li:not(:first-of-type) a:hover {
+    color: #17827B;
+    background-color: white;
+}
+
+nav .submenu ul li:not(:first-of-type) a {
+    background-color: #17827B;
+    color: white;
+    transition: .5s;
+}
+
+.menu-wrapper {
+    display: flex;
+    flex: 1;
+    border-bottom: 1px solid #eeeeee;
+}
+
+.checkBtn {
+    display: none;
+}
+
+#check {
+    display: none;
+}
+
+@media (max-width: 768px) {
+    .menu-wrapper {
+        border: unset;
+        flex-direction: column;
+        margin-top: 10px;
+    }
+    nav .submenu {
+        opacity: 0;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav .menu {
+        flex: 1;
+        opacity: 0;
+        transition: .5s;
+    }
+
+    nav .submenu ul,
+    nav .menu ul {
+        width: 100%;
+    }
+
+    nav .menu ul li a {
+        color: white;
+        padding: unset;
+        display: block;
+        padding: 10px 15px
+    }
+
+    nav .menu ul li {
+        display: block;
+        background-color: #212121;
+        border-bottom: 1px white solid;
+    }
+
+    nav #check:checked ~ .menu-wrapper .submenu,
+    nav #check:checked ~ .menu-wrapper .menu  {
+        opacity: 1;
+        transition: .5s;
+    }
+
+    .checkBtn {
+        display: block;
+        position: absolute;
+        right: 0;
+        font-size: 30px;
+        line-height: 80px;
+        z-index: 10;
+    }
+    nav .submenu ul li a { 
+        color: white;
+        background-color: unset !important;
+        border: unset !important;
+        padding: 10px 15px;
+        display: block;
+        font-weight: 500;
+    }
+
+    nav .submenu ul li { 
+        display: block;
+        padding: unset;
+        background-color: #212121;
+        border-bottom: 1px white solid;
+    }
+    
+    nav .submenu {
+        justify-content: flex-start;
+    }
+
+    nav .submenu ul li a:hover {
+        color: white !important;
+    }
+}
+
+.content {
+    margin-top: 30px;
+    padding: 30px 100px;
+    width: 100vw;
+    /* height: 300px; */
+    /* border-top: 1px solid #ccc; */
+}
+
+footer {
+    width: 100%;
+    padding: 30px 100px 10px 100px;
+    background-color: #1E2025;
+    color: white;
+}
+
+footer .copyright {
+    margin-top: 50px;
+    font-size: 12px;
+}
+
+.row {
+    display: flex;
+}
+
+.row .col {
+    flex: 1;
+}
+
+.address {
+    margin-bottom: 30px;
+}
+
+.address:last-child {
+    margin-bottom: 0;
+}
+
+footer .title {
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.address .title {
+    
+}
+
+.address .subtitle {
+    font-size: 14px;
+}
+
+.col.centered {
+    display: flex;
+    justify-content: center;
+}
+
+.socialMedia ul i {
+    width: 20px;
+}
+
+.socialMedia ul li {
+    padding: 10px 0;
+}
+
+.socialMedia ul li:first-child {
+    padding-top: 0;
+}
+
+.supporter {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.supporter img {
+    width: 45%;
+    margin-bottom: 20px;
+    /* display: block; */
+}
+
+.supporter img:nth-child(2) {
+    margin-left: 10px;
+}
